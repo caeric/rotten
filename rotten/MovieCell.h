@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MovieCell.h
 //  rotten
 //
 //  Created by Eric Hung on 1/8/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MovieCell : UITableViewCell
 
 @end

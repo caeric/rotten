@@ -14,13 +14,15 @@
 		EC08D91C187E5DA500DA8B96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC08D91B187E5DA500DA8B96 /* main.m */; };
 		EC08D920187E5DA600DA8B96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC08D91F187E5DA600DA8B96 /* AppDelegate.m */; };
 		EC08D923187E5DA600DA8B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC08D921187E5DA600DA8B96 /* Main.storyboard */; };
-		EC08D926187E5DA600DA8B96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC08D925187E5DA600DA8B96 /* ViewController.m */; };
 		EC08D928187E5DA600DA8B96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC08D927187E5DA600DA8B96 /* Images.xcassets */; };
 		EC08D92F187E5DA600DA8B96 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC08D92E187E5DA600DA8B96 /* XCTest.framework */; };
 		EC08D930187E5DA600DA8B96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC08D90F187E5DA500DA8B96 /* Foundation.framework */; };
 		EC08D931187E5DA600DA8B96 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC08D913187E5DA500DA8B96 /* UIKit.framework */; };
 		EC08D939187E5DA600DA8B96 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC08D937187E5DA600DA8B96 /* InfoPlist.strings */; };
 		EC08D93B187E5DA600DA8B96 /* rottenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC08D93A187E5DA600DA8B96 /* rottenTests.m */; };
+		EC08D946187E5DCC00DA8B96 /* MovieListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC08D945187E5DCC00DA8B96 /* MovieListViewController.m */; };
+		EC08D949187E601800DA8B96 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC08D948187E601800DA8B96 /* MovieViewController.m */; };
+		EC08D94C187E6E1D00DA8B96 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC08D94B187E6E1D00DA8B96 /* MovieCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +47,18 @@
 		EC08D91E187E5DA500DA8B96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EC08D91F187E5DA600DA8B96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EC08D922187E5DA600DA8B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EC08D924187E5DA600DA8B96 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EC08D925187E5DA600DA8B96 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EC08D927187E5DA600DA8B96 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC08D92D187E5DA600DA8B96 /* rottenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rottenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC08D92E187E5DA600DA8B96 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EC08D936187E5DA600DA8B96 /* rottenTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "rottenTests-Info.plist"; sourceTree = "<group>"; };
 		EC08D938187E5DA600DA8B96 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC08D93A187E5DA600DA8B96 /* rottenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rottenTests.m; sourceTree = "<group>"; };
+		EC08D944187E5DCC00DA8B96 /* MovieListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieListViewController.h; sourceTree = "<group>"; };
+		EC08D945187E5DCC00DA8B96 /* MovieListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieListViewController.m; sourceTree = "<group>"; };
+		EC08D947187E601800DA8B96 /* MovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		EC08D948187E601800DA8B96 /* MovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
+		EC08D94A187E6E1D00DA8B96 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		EC08D94B187E6E1D00DA8B96 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +121,14 @@
 				EC08D91E187E5DA500DA8B96 /* AppDelegate.h */,
 				EC08D91F187E5DA600DA8B96 /* AppDelegate.m */,
 				EC08D921187E5DA600DA8B96 /* Main.storyboard */,
-				EC08D924187E5DA600DA8B96 /* ViewController.h */,
-				EC08D925187E5DA600DA8B96 /* ViewController.m */,
 				EC08D927187E5DA600DA8B96 /* Images.xcassets */,
 				EC08D916187E5DA500DA8B96 /* Supporting Files */,
+				EC08D944187E5DCC00DA8B96 /* MovieListViewController.h */,
+				EC08D945187E5DCC00DA8B96 /* MovieListViewController.m */,
+				EC08D947187E601800DA8B96 /* MovieViewController.h */,
+				EC08D948187E601800DA8B96 /* MovieViewController.m */,
+				EC08D94A187E6E1D00DA8B96 /* MovieCell.h */,
+				EC08D94B187E6E1D00DA8B96 /* MovieCell.m */,
 			);
 			path = rotten;
 			sourceTree = "<group>";
@@ -249,9 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC08D926187E5DA600DA8B96 /* ViewController.m in Sources */,
 				EC08D920187E5DA600DA8B96 /* AppDelegate.m in Sources */,
+				EC08D94C187E6E1D00DA8B96 /* MovieCell.m in Sources */,
 				EC08D91C187E5DA500DA8B96 /* main.m in Sources */,
+				EC08D946187E5DCC00DA8B96 /* MovieListViewController.m in Sources */,
+				EC08D949187E601800DA8B96 /* MovieViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
