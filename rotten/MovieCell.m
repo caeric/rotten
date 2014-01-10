@@ -14,7 +14,17 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.movieDescriptionLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+        self.movieDescriptionLabel.numberOfLines = 0;
     }
     return self;
 }

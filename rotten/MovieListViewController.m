@@ -7,6 +7,7 @@
 //
 
 #import "MovieListViewController.h"
+#import "MovieCell.h"
 
 @interface MovieListViewController ()
 @property (nonatomic, strong) NSArray *movies;
@@ -78,10 +79,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"MovieCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     NSDictionary *movie = [self.movies objectAtIndex:indexPath.row];
-    cell.textLabel.text = [movie objectForKey:@"title"];
+    cell.movieTitleLabel.text = [movie objectForKey:@"title"];
+    cell.movieDescriptionLabel.text = [movie objectForKey:@"synopsis"];
+    
+    
+    cell.movieDescriptionLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    cell.movieDescriptionLabel.numberOfLines = 0;
+
     
     // Configure the cell...
     

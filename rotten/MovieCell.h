@@ -10,4 +10,7 @@
 
 @interface MovieCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *movieTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *movieDescriptionLabel;
+
 @end
