@@ -84,12 +84,7 @@
     NSDictionary *movie = [self.movies objectAtIndex:indexPath.row];
     cell.movieTitleLabel.text = [movie objectForKey:@"title"];
     cell.movieDescriptionLabel.text = [movie objectForKey:@"synopsis"];
-    
-    
-    cell.movieDescriptionLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-    cell.movieDescriptionLabel.numberOfLines = 0;
 
-    
     // Configure the cell...
     
     return cell;

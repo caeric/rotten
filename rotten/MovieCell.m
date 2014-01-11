@@ -23,10 +23,13 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.movieDescriptionLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-        self.movieDescriptionLabel.numberOfLines = 0;
     }
     return self;
+}
+
+- (void)awakeFromNib {
+    self.movieDescriptionLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    self.movieDescriptionLabel.numberOfLines = 0;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

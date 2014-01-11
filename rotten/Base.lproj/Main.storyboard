@@ -38,7 +38,6 @@
                                 <connections>
                                     <outlet property="movieDescriptionLabel" destination="1DA-Lc-p88" id="ETV-2G-CQz"/>
                                     <outlet property="movieTitleLabel" destination="7LS-Qi-Lep" id="OLN-aX-CCX"/>
-                                    <segue destination="gzT-b7-gTJ" kind="push" id="hup-MD-pT1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,25 +51,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ka2-Wx-VAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="630" y="119"/>
-        </scene>
-        <!--Movie View Controller - Frozen-->
-        <scene sceneID="Ifg-Jr-d3G">
-            <objects>
-                <viewController id="gzT-b7-gTJ" customClass="MovieViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Vm3-19-cid"/>
-                        <viewControllerLayoutGuide type="bottom" id="Fyr-0T-T4r"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QoK-BG-mtS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Frozen" id="bfI-AH-9zp"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xqd-L7-0My" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1210" y="119"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5K9-MT-tVN">
