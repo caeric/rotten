@@ -43,6 +43,7 @@
                                     <outlet property="movieDescriptionLabel" destination="1DA-Lc-p88" id="ETV-2G-CQz"/>
                                     <outlet property="movieImageView" destination="cfX-RE-hbc" id="P90-YU-TAi"/>
                                     <outlet property="movieTitleLabel" destination="7LS-Qi-Lep" id="OLN-aX-CCX"/>
+                                    <segue destination="bli-1K-1BD" kind="push" id="sBo-41-pQq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -56,6 +57,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ka2-Wx-VAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="630" y="119"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QCh-Js-Gyg">
+            <objects>
+                <viewController id="bli-1K-1BD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QP0-WM-Zub"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gln-xC-rBv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N2N-q1-xVQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iLa-Tt-MQf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdD-GE-O0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="120"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5K9-MT-tVN">
