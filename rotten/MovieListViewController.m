@@ -9,9 +9,11 @@
 #import "MovieListViewController.h"
 #import "MovieCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "Movie.h"
+#import "MovieDetailViewController.h"
 
 @interface MovieListViewController ()
-@property (nonatomic, strong) NSArray *movies;
+@property (nonatomic, strong) NSMutableArray *movies;
 
 @end
 
@@ -22,7 +24,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        self.movies = [NSArray array];
+
     }
     return self;
 }
@@ -30,15 +32,21 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
+        self.movies = [NSMutableArray array];
         NSString *url = @"http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=g9au4hv6khv6wzvzgt55gpqs";
         
         // NSURLConnection is just the executor, NSURLRequest contains the brainy stuff, all the header stuff lives in NSURLRequest
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
         [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
             id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            self.movies = [object valueForKeyPath:@"movies"];
+            NSArray *results = [object valueForKeyPath:@"movies"];
+            
+            for (NSDictionary *movieDict in results) {
+                Movie *movie = [[Movie alloc]initWithDict: movieDict];
+                [self.movies addObject:movie];
+            }
             NSLog(@"%@", object);
-                    [self.tableView reloadData];
+            [self.tableView reloadData];
         }];
 
     }
@@ -82,14 +90,15 @@
     static NSString *CellIdentifier = @"MovieCell";
     MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSDictionary *movie = [self.movies objectAtIndex:indexPath.row];
-    cell.movieTitleLabel.text = [movie objectForKey:@"title"];
-    cell.movieDescriptionLabel.text = [movie objectForKey:@"synopsis"];
-    NSDictionary *posters =  [movie objectForKey:@"posters"];
-    NSLog(@"%@", [posters objectForKey:@"profile"]);
+//    NSDictionary *movie = [self.movies objectAtIndex:indexPath.row];
+    Movie *movie = [self.movies objectAtIndex:indexPath.row];
+    cell.movieTitleLabel.text = movie.title;
+    cell.movieDescriptionLabel.text = movie.synopsis;
     
-    NSURL *url = [NSURL URLWithString:[posters objectForKey:@"profile"]];
-[cell.movieImageView setImageWithURL: url];
+//    cell.movieTitleLabel.text = [movie objectForKey:@"title"];
+//    cell.movieDescriptionLabel.text = [movie objectForKey:@"synopsis"];
+    NSURL *url = [NSURL URLWithString: movie.posterUrl];
+    [cell.movieImageView setImageWithURL: url];
 
     // Configure the cell...
     
@@ -135,7 +144,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -143,8 +152,12 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    UITableViewCell *selectedCell = (UITableViewCell *)sender;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:selectedCell];
+    
+    MovieDetailViewController *movieDetailViewController = (MovieDetailViewController *)segue.destinationViewController;
+    movieDetailViewController.movie = [self.movies objectAtIndex:indexPath.row];
 }
-
- */
 
 @end

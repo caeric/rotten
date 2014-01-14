@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="630" y="119"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie Detail View Controller-->
         <scene sceneID="QCh-Js-Gyg">
             <objects>
-                <viewController id="bli-1K-1BD" sceneMemberID="viewController">
+                <viewController id="bli-1K-1BD" customClass="MovieDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QP0-WM-Zub"/>
                         <viewControllerLayoutGuide type="bottom" id="Gln-xC-rBv"/>

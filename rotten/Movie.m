@@ -10,4 +10,16 @@
 
 @implementation Movie
 
+- (id) initWithDict:(NSDictionary *) dictionary {
+    self = [super init];
+    if (self) {
+        self.title = [dictionary objectForKey:@"title"];
+        self.synopsis = [dictionary objectForKey:@"synopsis"];
+        self.casts = [dictionary objectForKey:@"abridged_cast"];
+        NSDictionary *posters =  [dictionary objectForKey:@"posters"];
+        self.posterUrl = [posters objectForKey:@"profile"];
+    }
+    return self;
+}
+
 @end
