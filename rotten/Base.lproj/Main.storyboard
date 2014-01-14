@@ -28,15 +28,20 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DA-Lc-p88">
-                                            <rect key="frame" x="8" y="34" width="279" height="109"/>
+                                            <rect key="frame" x="142" y="34" width="145" height="109"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfX-RE-hbc">
+                                            <rect key="frame" x="8" y="41" width="127" height="95"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="movieDescriptionLabel" destination="1DA-Lc-p88" id="ETV-2G-CQz"/>
+                                    <outlet property="movieImageView" destination="cfX-RE-hbc" id="P90-YU-TAi"/>
                                     <outlet property="movieTitleLabel" destination="7LS-Qi-Lep" id="OLN-aX-CCX"/>
                                 </connections>
                             </tableViewCell>

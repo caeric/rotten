@@ -8,6 +8,7 @@
 
 #import "MovieListViewController.h"
 #import "MovieCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface MovieListViewController ()
 @property (nonatomic, strong) NSArray *movies;
@@ -84,6 +85,11 @@
     NSDictionary *movie = [self.movies objectAtIndex:indexPath.row];
     cell.movieTitleLabel.text = [movie objectForKey:@"title"];
     cell.movieDescriptionLabel.text = [movie objectForKey:@"synopsis"];
+    NSDictionary *posters =  [movie objectForKey:@"posters"];
+    NSLog(@"%@", [posters objectForKey:@"profile"]);
+    
+    NSURL *url = [NSURL URLWithString:[posters objectForKey:@"profile"]];
+[cell.movieImageView setImageWithURL: url];
 
     // Configure the cell...
     
