@@ -10,6 +10,8 @@
 
 @interface MovieDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+
 @end
 
 @implementation MovieDetailViewController
@@ -19,14 +21,24 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+
+
     }
     return self;
+}
+
+- (void)awakeFromNib {
+
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.descriptionLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    self.descriptionLabel.numberOfLines = 0;
+
+        [self.descriptionLabel setText:self.movie.synopsis];
 }
 
 - (void)didReceiveMemoryWarning

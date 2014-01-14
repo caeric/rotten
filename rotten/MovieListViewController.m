@@ -41,6 +41,7 @@
             id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             NSArray *results = [object valueForKeyPath:@"movies"];
             
+//            NSString *castString = @"";
             for (NSDictionary *movieDict in results) {
                 Movie *movie = [[Movie alloc]initWithDict: movieDict];
                 [self.movies addObject:movie];
